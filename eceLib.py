@@ -19,8 +19,7 @@ def volt_divide(vin: float, rs: list):
     return vs
     
 
-
-def calc2Para(res1=float, res2=float):
+def calc2Para(res1: float, res2: float):
     """
     Deprecated. Used to calculate the value of two 
     resistors or inductors in parallel.
@@ -28,11 +27,11 @@ def calc2Para(res1=float, res2=float):
     """
     return (res1*res2)/(res1 + res2)
 
-def parallel(vList: list):
-    """Return the equivalent value of the  """
+def parallel(*vs):
+    """Return the parallel equivalent value of the values passed"""
     sum = 0
-    for val in vList:
-        sum += 1/val
+    for v in vs:
+        sum += 1/v
     return 1/sum
 
 
